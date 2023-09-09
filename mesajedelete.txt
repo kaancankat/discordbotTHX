@@ -1,0 +1,17 @@
+import asyncio
+import discord
+from discord.ext.commands import Bot
+from discord.ext import commands
+
+Client= commands.Bot(command_prefix= "!" , intents= discord.Intents.all())
+Token= "MTE1MDA3NzkwNTc2Njk5Mzk3MA.GhodzL.7Q1t7oHCa41AUqulsIQTaR6ZVYW6lDFVOMLftk"
+
+@Client.command(pass_context = True)
+async def clear(ctx, number):
+    mgs = [] 
+    number = int(number) 
+    async for x in Client.logs_from(ctx.message.channel, limit = number):
+        mgs.append(x)
+    await Client.delete_messages(mgs)
+
+Client.run(Token)

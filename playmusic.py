@@ -5,7 +5,7 @@ import yt_dlp as youtube_dl
 import time
 
 client = discord.Client(intents=discord.Intents.all())
-key = "MTE1MDA3NzkwNTc2Njk5Mzk3MA.GoS0fb.Gx1N0NkioYP7cmPBCuIBWrVJe2TC0fh14xObHs"
+key = "MTE1MDA3NzkwNTc2Njk5Mzk3MA.GhodzL.7Q1t7oHCa41AUqulsIQTaR6ZVYW6lDFVOMLftk"
 
 voice_clients = {}
 
