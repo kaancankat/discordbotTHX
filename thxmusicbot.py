@@ -2,10 +2,12 @@ import discord
 import os
 import asyncio
 import yt_dlp as youtube_dl
+from discord.ext import commands
 import time
+import main
 
 client = discord.Client(intents=discord.Intents.all())
-key = "MTE1MDA3NzkwNTc2Njk5Mzk3MA.GhodzL.7Q1t7oHCa41AUqulsIQTaR6ZVYW6lDFVOMLftk"
+
 
 voice_clients = {}
 
@@ -69,4 +71,7 @@ async def on_message(msg):
             print(err)
 
 
-client.run(key)
+
+
+
+client.run("MTE1MDQwMTM0MTk3NDM4NDc2MQ.GE7tU7._QOB41I7RPpHbSH8L-XEHx-420N6J7zxH1jftY")

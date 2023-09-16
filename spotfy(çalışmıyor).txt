@@ -1,0 +1,47 @@
+#spo#
+
+#import spotipy
+#from spotipy.oauth2 import SpotifyOAuth
+## Spotify API istemcisini başlatın
+#sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id='c',
+#                                               client_secret='cv3zqng185id',
+#                                               redirect_uri='https://gitscordbotTHX',
+#                                               scope='user-library-read user-read-playback-state user-modify-playback-state'))
+#
+#@bot.command()
+#async def play(ctx, *, query):
+#    try:
+#        voice_state = ctx.author.voice
+#        if voice_state is not None:
+#            voice_channel = voice_state.channel
+#            if ctx.guild.id in voice_clients:
+#                await voice_clients[ctx.guild.id].move_to(voice_channel)
+#            else:
+#                voice_client = await voice_channel.connect()
+#                voice_clients[ctx.guild.id] = voice_client
+#        else:
+#            await ctx.send("Bu komutu kullanmak için bir ses kanalında olmalısınız.")
+#            return
+#
+#    except Exception as err:
+#        print(err)
+#
+#    try:
+#        results = sp.search(q=query, type='track,playlist')
+#        if results and results['tracks']['items']:
+#            track_url = results['tracks']['items'][0]['external_urls']['spotify']
+#            player = discord.FFmpegPCMAudio(track_url, **ffmpeg_options)
+#            voice_clients[ctx.guild.id].play(player)
+#        elif results and results['playlists']['items']:
+#            playlist_url = results['playlists']['items'][0]['external_urls']['spotify']
+#            tracks = sp.playlist_tracks(playlist_url)
+#            if tracks['items']:
+#                track_url = tracks['items'][0]['track']['external_urls']['spotify']
+#                player = discord.FFmpegPCMAudio(track_url, **ffmpeg_options)
+#                voice_clients[ctx.guild.id].play(player)
+#        else:
+#            await ctx.send("Spotify'da böyle bir şarkı veya çalma listesi bulunamadı.")
+#
+#    except Exception as err:
+#        print(err)
+#        
